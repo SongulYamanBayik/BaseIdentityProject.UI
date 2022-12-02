@@ -1,0 +1,40 @@
+﻿@model UserRegisterViewModel
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<div class="container">
+    <h1>Kullanıcı Kayıt Formu</h1>
+    <form method="post">
+        <label>Ad</label>
+        <input type="text" asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-warning"></span>
+        <br />
+        <label>Soyad</label>
+        <input type="text" asp-for="Surname" class="form-control" />
+        <span asp-validation-for="Surname" class="text-warning"></span>
+        <br />
+        <label>Kullanıcı Adı</label>
+        <input type="text" asp-for="Username" class="form-control" />
+        <span asp-validation-for="Username" class="text-warning"></span>
+        <br />
+        <label>Mail</label>
+        <input type="text" asp-for="Mail" class="form-control" />
+        <span asp-validation-for="Mail" class="text-warning"></span>
+        <br />
+        <label>Şehir</label>
+        <input type="text" asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-warning"></span>
+        <br />
+        <label>Şifre</label>
+        <input type="text" asp-for="Password" class="form-control" />
+        <span asp-validation-for="Password" class="text-warning"></span>
+        <br />
+        <label>Şifre Tekrar</label>
+        <input type="text" asp-for="ConfirmPassword" class="form-control" />
+        <span asp-validation-for="ConfirmPassword" class="text-warning"></span>
+        <br />
+        <div asp-validation-summary="ModelOnly" class="text-info"></div>
+        <button class="btn btn-primary">Kayıt Ol</button>
+    </form>
+</div>
